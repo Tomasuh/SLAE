@@ -15,11 +15,9 @@ shellcode = shellcode.replace("\\","")
 input = shellcode
 theList = input.split("x")
 out = ""
-for shit in theList:
-	if shit != '':
-		out += "0x" + shit + ","
-		#print shit
-		#print out
+for value in theList:
+	if value != '':
+		out += "0x" + value + ","
 
 print "NASM stylish:"
 print out[:-1]
