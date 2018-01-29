@@ -19,7 +19,7 @@ def get_ip(addr):
   return socket.inet_aton(addr)
 
 
-def port2int(port):
+def packPort(port):
   return struct.pack("!H", port)
 
 def format_val(string):
@@ -34,6 +34,6 @@ ipEnc = format_val(get_ip(ip))
 
 port = int(raw_input("Port:"))
 
-portEnc = format_val(port2int(port))
+portEnc = format_val(packPort(port))
 
 print format_shellcode(ipEnc, portEnc)
